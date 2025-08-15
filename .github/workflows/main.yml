@@ -18,7 +18,7 @@ jobs:
 
       - name: Compile
         run: |
-          BUILD=$(($(git rev-list --count --first-parent HEAD)+3500))
+          BUILD=$(($(git rev-list --count --first-parent HEAD)+3501))
           TODAY=$(date +"%d.%m.%y")
           echo "BUILD=${BUILD}" >> "$GITHUB_ENV"
           echo "TODAY=${TODAY}" >> "$GITHUB_ENV"
@@ -91,7 +91,7 @@ jobs:
           echo "Refer to https://forum.umineko-project.org for more details." >> release_notes.md
 
       - name: Release
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -104,7 +104,7 @@ jobs:
           prerelease: false
 
       - name: Upload Extra
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -115,7 +115,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload Main
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -126,7 +126,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload Main (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -137,7 +137,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload PT
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -148,7 +148,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload PT (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -159,7 +159,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload WH
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -170,7 +170,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload WH (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -181,7 +181,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload CN
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -192,7 +192,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload CN (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -203,7 +203,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload CHT
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -214,7 +214,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload CHT (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -225,7 +225,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload IT
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -236,7 +236,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload IT (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -247,7 +247,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload TR
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -258,7 +258,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload TR (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -269,7 +269,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload IDN
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -280,7 +280,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload IDN (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -291,7 +291,7 @@ jobs:
           asset_content_type: application/zip
           
       - name: Upload VI
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -302,7 +302,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload VI (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        if: github.repository_owner == 'RafaelVH19'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
